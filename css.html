@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        height: 3000px;
+    }
+    .box{
+        position: relative;
+        height: 700px;
+    }
+    /*Position absoult က Scroll ဆွဲရင်ပါသွားတယ်*/
+    .box-one{
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    right: 300px;
+    }
+    .box-two{
+    position: fixed;
+    z-index: 2;
+    top: 500px;
+    bottom: 300px;
+    }
+    .box-three{
+    position: sticky;
+    z-index: 1;
+    top: 0px;
+    left: 300px;
+    }
+</style>
+<body>
+    <div class="box border border-3 border-primary m-5">
+        <div class="box-one p-3 bg-info"></div>
+        <div class="box-two p-4 bg-secondary"></div>
+        <div class="box-three p-5 bg-dark"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus laudantium velit dolor quia ex facilis suscipit repellendus magnam accusamus veniam eius, cupiditate non explicabo cumque dolorum architecto sequi perferendis optio officiis accusantium doloribus, delectus quam sit. Ut expedita omnis fugit? Temporibus, dignissimos minus animi vero omnis dolor aliquid magnam fugiat in blanditiis ut sapiente suscipit, minima quis amet facere, voluptas culpa quibusdam? Repellendus nostrum laboriosam iure placeat tenetur exercitationem dicta animi, possimus sequi laudantium, eaque expedita! Sunt consequuntur rem illo debitis sit quod dolorem molestiae, tempora quos ratione eos minima, consequatur delectus vitae! Neque, maxime sequi sunt laboriosam accusantium asperiores?</p>
+    </div>
+    
+</body>
+</html>
