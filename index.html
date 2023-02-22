@@ -13,6 +13,11 @@
     body{
         height: 30000px;
     }
+    .slide-img{
+        height: 500px;
+        object-fit: contain;
+        object-position: top;
+    }
 </style>
 <body class="p-3">
     <h1>Min Ga Lar Bar</h1>
@@ -304,8 +309,97 @@ a nam commodi.</p>
     <button class="btn btn-warning"><span class="spinner-grow spinner-grow-sm me-2"></span> Loading</button>
     
     <hr>
-    <h4>Position</h4>
-
+    <!-- Model -->
+    <h4>Modal</h4>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Hello">
+        Launch demo modal
+    </button>
+    
+    <!-- Modal -->
+    <!-- ဘေးကကြိုက်တဲ့နေရာနှိပ် မပိတ်ချင်ရင် data-bs-backdrop="static" အဲ့Keyလေးထည့် -->
+    <div class="modal fade" id="Hello" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Min Ga Lar Bar</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex">
+                    <img style="width: 200px" src="./images/139838785_223901326024645_417954965466804969_n.jpg" alt="">
+                    <p class="ms-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo magnam minus placeat facilis maxime, in minima beatae at ipsa, est amet aut ad tempora voluptas necessitatibus eius mollitia? Quibusdam quos iusto suscipit at eos ipsum nesciunt aliquam quasi, dolore reiciendis voluptates ipsam placeat eaque, hic, ratione reprehenderit cupiditate dolores laborum.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h4>Offcanvas</h4>
+    <a class="btn btn-primary" data-bs-toggle="offcanvas"  href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        Link with href
+    </a>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+        aria-controls="offcanvasExample">
+        Button with data-bs-target
+    </button>
+    
+    <div class="offcanvas offcanvas-start" tabindex="-1" data-bs-backdrop="static" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
+                etc.
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h4>Slide Show (Carousel)</h4>
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/received_333061438667496.gif" class="d-block w-100 slide-img" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img  src="images/270380179_444027790698468_974689942049461406_n.jpg" class="d-block w-100 slide-img" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img  src="images/received_474977364317800.jpeg" class="d-block w-100 slide-img" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img  src="images/received_297689915037363.jpeg" class="d-block w-100 slide-img" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br>
+    <div class="d-flex justify-content-between">
+        <button class="btn btn-primary" data-bs-target="#carouselExample" data-bs-slide="prev"><i class="bi bi-arrow-left"></i></button>
+        <button class="btn btn-primary" data-bs-target="#carouselExample" data-bs-slide="next"><i class="bi bi-arrow-right"></i></button>
+    </div>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
